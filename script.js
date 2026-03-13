@@ -41,3 +41,17 @@ function escrever(){
 }
 
 escrever();
+
+const container = document.querySelector(".container-card")
+
+let position = 0
+
+document.querySelector(".next").onclick = () => {
+    position -= 310
+    container.style.transform = `translateX(${position}px)`
+}
+
+document.querySelector(".prev").onclick = () => {
+    position += 310
+    container.style.transform = `translateX(${position}px)`
+}
